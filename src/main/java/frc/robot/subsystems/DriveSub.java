@@ -24,12 +24,12 @@ import static frc.robot.Constants.*;
 
 public class DriveSub extends SubsystemBase {
   /** Creates a new DriveSub. */
-  private final WPI_TalonSRX leftFrontDriveTalonSRX = new WPI_TalonSRX(k_leftFrontDriveTalon);
-  private final WPI_TalonSRX leftRearDriveTalonSRX = new WPI_TalonSRX(k_leftRearDriveTalon);
-  private final SpeedControllerGroup m_left = new SpeedControllerGroup(leftFrontDriveTalonSRX, leftRearDriveTalonSRX);
-  private final WPI_TalonSRX rightFrontDriveTalonSRX = new WPI_TalonSRX(k_rightFrontDriveTalon);
-  private final WPI_TalonSRX rightRearDriveTalonSRX = new WPI_TalonSRX(k_rightRearDriveTalon);
-  private final SpeedControllerGroup m_right = new SpeedControllerGroup(rightFrontDriveTalonSRX, rightRearDriveTalonSRX);
+  private final WPI_VictorSPX leftFrontDrive = new WPI_VictorSPX(k_leftFrontDriveTalon);
+  private final WPI_VictorSPX leftRearDrive = new WPI_VictorSPX(k_leftRearDriveTalon);
+  private final SpeedControllerGroup m_left = new SpeedControllerGroup(leftFrontDrive, leftRearDrive);
+  private final WPI_VictorSPX rightFrontDrive = new WPI_VictorSPX(k_rightFrontDriveTalon);
+  private final WPI_VictorSPX rightRearDrive = new WPI_VictorSPX(k_rightRearDriveTalon);
+  private final SpeedControllerGroup m_right = new SpeedControllerGroup(rightFrontDrive, rightRearDrive);
   private final DifferentialDrive m_robotDrive = new DifferentialDrive(m_left, m_right); 
 
   // new varibales for gyro
