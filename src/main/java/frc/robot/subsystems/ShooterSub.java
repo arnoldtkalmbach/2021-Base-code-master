@@ -27,7 +27,7 @@ public class ShooterSub extends SubsystemBase {
   private final WPI_TalonFX lowerMotor = new WPI_TalonFX(k_lowerMotor);
   //private final WPI_TalonSRX upperMotor = new WPI_TalonSRX(k_upperMotor);
   //private final WPI_TalonSRX lowerMotor = new WPI_TalonSRX(k_lowerMotor);
-  private final WPI_VictorSPX positionMotor = new WPI_VictorSPX(k_positionMotor);
+  private final WPI_TalonSRX positionMotor = new WPI_TalonSRX(k_positionMotor);
   private final WPI_VictorSPX feedMotor = new WPI_VictorSPX(k_feedMotor);
   private final Encoder m_encoder = new Encoder(k_encoderDIO_1, k_encoderDIO_2);
  
