@@ -97,7 +97,7 @@ public class ShooterSub extends SubsystemBase {
 
   // turns on position motor at specific position
   public void positionMotorOn(double speed) {
-    positionMotor.set(speed);
+    positionMotor.set(ControlMode.PercentOutput, speed);
   }
 
   // turns off position motor

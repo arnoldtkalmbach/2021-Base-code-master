@@ -8,6 +8,8 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 
 import frc.robot.subsystems.ShooterSub;
 
+import static frc.robot.Constants.*;
+
 public class Aim extends CommandBase {
   /** Creates a new Aim. */
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
@@ -29,12 +31,14 @@ public class Aim extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
+    double speed = 0.0;
     if(m_goUP){
-      m_subsystem.positionMotorOn(0.5);
+      speed = k_aimSpeed;
     }
     else{
-      m_subsystem.positionMotorOn(-0.5);
+      speed = -1.0 * k_aimSpeed;      
     }
+    m_subsystem.positionMotorOn(speed);
   }
 
   // Called once the command ends or is interrupted.
