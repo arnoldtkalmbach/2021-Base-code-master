@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 
 import frc.robot.subsystems.ShooterSub;
 
-import static frc.robot.Constants.*;
+import static frc.robot.Constants.*;  // add constants
 
 public class Aim extends CommandBase {
   /** Creates a new Aim. */
